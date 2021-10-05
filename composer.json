@@ -1,24 +1,28 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "chapdel/laravel-zender",
+    "description": "Send SMS with Major SMS Gateway on Laravel App",
     "keywords": [
-        ":vendor_name",
+        "chapdel",
         "laravel",
-        ":package_slug"
+        "laravel-zender"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/chapdel/laravel-zender",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Chapdel KAMGA",
+            "email": "drop@chapdel.me",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.0",
-        "spatie/laravel-package-tools": "^1.4.3",
-        "illuminate/contracts": "^8.37"
+        "clicksend/clicksend-php": "^5.0",
+        "illuminate/contracts": "^8.37",
+        "illuminate/notifications": "^8.62",
+        "illuminate/queue": "^8.62",
+        "illuminate/support": "^8.62",
+        "spatie/laravel-package-tools": "^1.4.3"
     },
     "require-dev": {
         "nunomaduro/collision": "^5.3",
@@ -30,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Chapdel\\Zender\\": "src",
+            "Chapdel\\Zender\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Chapdel\\Zender\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -49,10 +53,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Chapdel\\Zender\\ZenderServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
+                "Zender": "Chapdel\\Zender\\ZenderFacade"
             }
         }
     },

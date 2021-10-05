@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Chapdel\Zender\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class ZenderCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-zender';
 
     public $description = 'My command';
 
