@@ -44,4 +44,11 @@ class CouldNotSendNotification extends Exception
     {
         return new static("Notification Gateway Error: {$exception->getReason()} [{$exception->getCode()}]");
     }
+
+    public static function invalidGateway()
+    {
+        return new static(
+            'Invalid SMS Gateway driver'
+        );
+    }
 }
