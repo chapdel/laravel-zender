@@ -2,9 +2,9 @@
 
 namespace Chapdel\Zender\Tests;
 
+use Chapdel\Zender\ZenderServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Chapdel\Zender\ZenderServiceProvider;
 
 class TestCase extends Orchestra
 {

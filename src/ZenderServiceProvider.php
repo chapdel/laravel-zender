@@ -4,7 +4,6 @@ namespace Chapdel\Zender;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Chapdel\Zender\Commands\ZenderCommand;
 
 class ZenderServiceProvider extends PackageServiceProvider
 {

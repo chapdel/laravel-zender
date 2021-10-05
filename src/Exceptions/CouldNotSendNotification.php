@@ -2,8 +2,8 @@
 
 namespace Zender\Exceptions;
 
-use Exception;
 use DomainException;
+use Exception;
 
 class CouldNotSendNotification extends Exception
 {

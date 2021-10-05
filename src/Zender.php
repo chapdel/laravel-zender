@@ -2,13 +2,12 @@
 
 namespace Chapdel\Zender;
 
-use Zender\Exceptions\CouldNotSendNotification;
 use ClickSendLib\APIException;
 use ClickSendLib\ClickSendClient;
+use Zender\Exceptions\CouldNotSendNotification;
 
 class Zender
 {
-
     /**
      * @param $from
      * @param $to
@@ -25,17 +24,17 @@ class Zender
                 // The payload may have more messages but we use just one at a time
                 $payload = ['messages' => [
                     [
-                        "from"      => $from,
-                        "to"        => $to,
-                        "body"      => $message,
-                        "schedule"  => $delay,
-                    ]
+                        "from" => $from,
+                        "to" => $to,
+                        "body" => $message,
+                        "schedule" => $delay,
+                    ],
                 ]];
 
                 $result = [
                     'success' => false,
                     'message' => '',
-                    'data'    => $payload['messages'][0],
+                    'data' => $payload['messages'][0],
                 ];
 
                 try {
@@ -70,6 +69,7 @@ class Zender
 
             default:
                 throw CouldNotSendNotification::invalidGateway();
+
                 break;
         }
     }
